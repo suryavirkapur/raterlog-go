@@ -1,0 +1,8 @@
+[tools]
+go = "1.26.3"
+
+[tasks.dev]
+run = "go run ./cmd/raterlog"
+
+[tasks.test]
+run = "go test ./..."
