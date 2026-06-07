@@ -60,3 +60,12 @@ Log ingestion accepts an API token in either `Authorization: Bearer <token>` or 
 ## Storage Boundary
 
 Use Postgres when the data needs joins, uniqueness constraints, membership checks, ownership, or transactional updates. Use Cassandra/ScyllaDB for time-ordered channel events where queries are scoped to a channel and ordered by timestamp.
+
+## Migrations
+
+Migrations are embedded and applied on API startup:
+
+- Postgres migrations live in `internal/postgres/migrations/*.sql` and are tracked in `schema_migrations`.
+- Scylla/Cassandra migrations live in `internal/scylla/migrations/*.cql` and are tracked in `schema_migrations` inside the configured keyspace.
+
+Add migrations with a zero-padded version prefix, for example `0002_add_plan_limits.sql` or `0004_add_log_ttl.cql`.
