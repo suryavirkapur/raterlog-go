@@ -69,3 +69,7 @@ Migrations are embedded and applied on API startup:
 - Scylla/Cassandra migrations live in `internal/scylla/migrations/*.cql` and are tracked in `schema_migrations` inside the configured keyspace.
 
 Add migrations with a zero-padded version prefix, for example `0002_add_plan_limits.sql` or `0004_add_log_ttl.cql`.
+
+## Verification
+
+SEASNOKE_MULTITURN_EXISTING_FILE_20260612201850
