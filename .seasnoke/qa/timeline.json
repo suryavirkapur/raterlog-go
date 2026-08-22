@@ -1,0 +1,50 @@
+{
+  "url": "http://127.0.0.1:8000/",
+  "timeline": [
+    {
+      "t_ms": 29,
+      "step": "navigate",
+      "url": "http://127.0.0.1:8000/"
+    },
+    {
+      "t_ms": 65,
+      "step": "loaded"
+    },
+    {
+      "t_ms": 84,
+      "step": "title",
+      "value": "raterlog-go-multiturn-20260612201850"
+    },
+    {
+      "t_ms": 129,
+      "step": "screenshot",
+      "name": "00-load",
+      "label": "initial paint",
+      "bytes": 56841
+    },
+    {
+      "t_ms": 735,
+      "step": "scroll",
+      "y": "mid"
+    },
+    {
+      "t_ms": 783,
+      "step": "screenshot",
+      "name": "01-scroll",
+      "label": "scrolled",
+      "bytes": 69924
+    },
+    {
+      "t_ms": 1651,
+      "step": "screenshot",
+      "name": "99-final",
+      "label": "final",
+      "bytes": 56841
+    },
+    {
+      "t_ms": 1653,
+      "step": "dom_dump",
+      "chars": 2919
+    }
+  ]
+}
