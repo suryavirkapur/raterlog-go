@@ -2,6 +2,8 @@
 
 Raterlog Go is a backend rewrite of `../raterlog`. It keeps the original split-storage intent, but makes ownership explicit:
 
+This repository documents the SeaSnoke factory reliability probe conducted on 2026-08-22.
+
 - Postgres stores users, sessions, companies, team memberships, invites, channels, and API tokens.
 - Cassandra or ScyllaDB stores append-heavy event logs.
 
