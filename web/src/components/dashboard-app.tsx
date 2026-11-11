@@ -129,13 +129,20 @@ export function DashboardApp() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     await run(async () => {
+      const payload =
+        authMode === "signup"
+          ? {
+              name: String(form.get("name") ?? ""),
+              email: String(form.get("email") ?? ""),
+              password: String(form.get("password") ?? "")
+            }
+          : {
+              email: String(form.get("email") ?? ""),
+              password: String(form.get("password") ?? "")
+            };
       const currentUser = await api<{ user: User }>(`/api/auth/${authMode}`, {
         method: "POST",
-        body: JSON.stringify({
-          name: String(form.get("name") ?? ""),
-          email: String(form.get("email") ?? ""),
-          password: String(form.get("password") ?? "")
-        })
+        body: JSON.stringify(payload)
       });
       setUser(currentUser.user);
       await loadCompanies();
